@@ -1,4 +1,4 @@
-import { createUserObject } from './home-utils.js';
+import { createUserObject } from './utils.js';
 import { getUser, saveUser } from './local-storage-utils.js';
 
 // import functions and grab DOM elements

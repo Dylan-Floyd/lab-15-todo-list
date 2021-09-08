@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="./todos.css">
-    <title>Document</title>
+    <title>Todo List</title>
 </head>
 
 <body>
@@ -20,9 +20,16 @@
     </header>
     <main>
         <section class="main-section">
-            <ul>
+            <ul id="todos-ul">
                 <li>a todo will be here hopefully</li>
             </ul>
+            <form id="add-todo-form">
+                <label>
+                    New Todo: 
+                    <input type="text" name="todo-text">
+                </label>
+                <input type="submit" value="Add">
+            </form>
         </section>
     </main>
     <footer>

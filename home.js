@@ -1,10 +1,11 @@
-import { getUser } from './local-storage-utils.js';
+import { createUserObject } from './home-utils.js';
+import { getUser, saveUser } from './local-storage-utils.js';
 
 // import functions and grab DOM elements
 const form = document.querySelector('#login-signup-form');
 const loginButton = document.querySelector('#login-button');
 const signupButton = document.querySelector('#signup-button');
-const retryDisplay = document.querySelector('input.invalid-creds');
+const retryDisplay = document.querySelector('label.invalid-creds');
 // initialize global state
 
 // set event listeners 
@@ -17,9 +18,18 @@ loginButton.addEventListener('click', () => {
     const enteredUsername = formData.get('username');
     const enteredPassword = formData.get('password');
 
-    if (user.username === enteredUsername && user.password === enteredPassword) {
+    if (user && (user.username === enteredUsername && user.password === enteredPassword)) {
         window.location = './todos/';
     } else {
         retryDisplay.classList.remove('hidden');
     }
+});
+
+signupButton.addEventListener('click', () => {
+    const formData = new FormData(form);
+    const enteredUsername = formData.get('username');
+    const enteredPassword = formData.get('password');
+
+    saveUser(createUserObject(enteredUsername, enteredPassword));
+    window.location = './todos/';
 });

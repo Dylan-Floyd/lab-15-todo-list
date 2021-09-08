@@ -20,20 +20,28 @@
     </header>
     <main>
         <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <canvas id="bg-canvas" width="200" height="200">
-            </canvas>
-
+            <form id="login-signup-form">
+                <label class="invalid-creds hidden">
+                    Invalid credentials. Please try again.
+                </label>
+                <label>
+                    Username: 
+                    <input type="text" name="username">
+                </label>
+                <label>
+                    Password:
+                    <input type="password" name="password" required>
+                </label>
+                <input id="login-button" type="button" value="login">
+                <input id="signup-button" type="button" value="signup">
+            </form>
         </section>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
     </footer>
 
+    <canvas id="bg-canvas" width="200" height="200"></canvas>
     <script type="module" src="./app.js"></script>
     <script type="module" src="./bg-canvas.js"></script>
 </body>

@@ -121,7 +121,8 @@ export function loginUser(username, password) {
     const users = getUsers();
     const userData = users.find(user => { return user.username === username; });
     if (!userData) return false;
-    if (userData.pasword !== password) return false;
+    if (userData.password !== password) return false;
+    setActiveUser(userData.id);
     return true;
 }
 

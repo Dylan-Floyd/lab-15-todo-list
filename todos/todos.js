@@ -1,11 +1,10 @@
-import { addTodo, completeTodo, getTodos, getUser } from '../local-storage-utils.js';
-import { createTodoObject } from '../utils.js';
+import { addTodoText, completeTodo, getTodos, getActiveUser } from '../local-storage-utils.js';
 
 const todosUL = document.querySelector('#todos-ul');
 const addTodoForm = document.querySelector('#add-todo-form');
 
 //redirect user to homepage if there's no user set
-if (getUser() === null) window.location = '../';
+if (getActiveUser() === null) window.location = '../';
 
 function todoLiClickHandler(e) {
     const todoLi = e.target;
@@ -36,7 +35,7 @@ addTodoForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(addTodoForm);
     const todoText = formData.get('todo-text');
-    addTodo(createTodoObject(todoText));
+    addTodoText(todoText);
     renderTodos();
 });
 

@@ -35,6 +35,7 @@ function renderTodos() {
 addTodoForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const todoText = todoInput.value;
+    if (todoText === '') return;
     todoInput.value = '';
     addTodoText(todoText);
     renderTodos();

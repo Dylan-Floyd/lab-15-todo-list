@@ -2,6 +2,7 @@ import { addTodoText, completeTodo, getTodos, getActiveUser } from '../local-sto
 
 const todosUL = document.querySelector('#todos-ul');
 const addTodoForm = document.querySelector('#add-todo-form');
+const todoInput = document.querySelector('input[type="text"]');
 
 //redirect user to homepage if there's no user set
 if (getActiveUser() === null) window.location = '../';
@@ -33,8 +34,8 @@ function renderTodos() {
 
 addTodoForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const formData = new FormData(addTodoForm);
-    const todoText = formData.get('todo-text');
+    const todoText = todoInput.value;
+    todoInput.value = '';
     addTodoText(todoText);
     renderTodos();
 });

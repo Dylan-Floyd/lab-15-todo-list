@@ -1,3 +1,51 @@
 .completed {
     text-decoration: line-through;
 }
+
+.main-section {
+    padding: 20px;
+    background-color: rgba(0, 95, 107, 0.5);
+    color: white;
+    box-shadow: 3px 3px 15px 3px #00000080;
+    border-color:rgba(0, 68, 107, 0.5);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+}
+
+input[type="submit"] {
+    background-color: rgb(132, 41, 168);
+    border-radius: 3px;
+    border-width: 0px;
+    padding: 2px 7px;
+    box-shadow: 1px 3px 0 rgb(73, 22, 131);
+    transition: all .2s ease-in-out;
+    margin: 0px 3px;
+    font-size: 14px;
+    color: white;
+}
+
+input[type="submit"]:active {
+    transform: translateY(2px);
+    box-shadow: 1px 1px 0 rgb(77, 182, 252);
+}
+
+#todos-ul {
+    margin: 5px 0px;
+    width: 100%;
+}
+
+#todos-ul > li {
+    font-size: 22px;
+    border-bottom: 1px solid rgba(56, 56, 56, .4);
+    width: 100%;
+}
+
+#todos-ul > li:last-child {
+    border-bottom: 0px solid black;
+}

@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./styles/reset.css">
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./home.css">
+        <title>Todo List</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="./home.css">
-    <title>Todo List</title>
-</head>
+    <body>
+        <header>
+            <div class="gutter-right logo">
+                <img src="assets/big-logo.png" />
+            </div>
+        </header>
+        <main>
+            <section class="main-section">
+                <form id="login-signup-form">
+                    <label class="welcome-message">
+                        Welcome. Please login or signup to continue.
+                    </label>
+                    <label class="error-message hidden">
+                        Invalid credentials. Please try again.
+                    </label>
+                    <div class="inputs-div">
+                        <label>
+                            Username: 
+                            <input type="text" name="username" required>
+                        </label>
+                        <label>
+                            Password:
+                            <input type="password" name="password" required>
+                        </label>
+                    </div>
+                    <div class="buttons-div">
+                        <input id="login-button" type="button" value="Login">
+                        <input id="signup-button" type="button" value="Signup">
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        </footer>
 
-<body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
-        </div>
-    </header>
-    <main>
-        <section class="main-section">
-            <form id="login-signup-form">
-                <label class="error-message hidden">
-                    Invalid credentials. Please try again.
-                </label>
-                <label>
-                    Username: 
-                    <input type="text" name="username">
-                </label>
-                <label>
-                    Password:
-                    <input type="password" name="password" required>
-                </label>
-                <input id="login-button" type="button" value="login">
-                <input id="signup-button" type="button" value="signup">
-            </form>
-        </section>
-    </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
-
-    <canvas id="bg-canvas" width="200" height="200"></canvas>
-    <script type="module" src="./home.js"></script>
-    <script type="module" src="./bg-canvas.js"></script>
-</body>
-
+        <canvas id="bg-canvas" width="200" height="200"></canvas>
+        <script type="module" src="./home.js"></script>
+        <script type="module" src="./bg-canvas.js"></script>
+    </body>
 </html>

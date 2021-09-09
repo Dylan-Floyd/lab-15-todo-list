@@ -6,7 +6,7 @@ const loginButton = document.querySelector('#login-button');
 const signupButton = document.querySelector('#signup-button');
 const errorMessage = document.querySelector('label.error-message');
 const BAD_LOGIN_MESSAGE = 'Invalid credentials. Please try again.';
-const BAD_SIGNUP_MESSAGE = 'That username is taken. Please use a different one.';
+const BAD_SIGNUP_MESSAGE = 'That username is taken or your credentials are invalid. Please use a different one.';
 
 // initialize global state
 

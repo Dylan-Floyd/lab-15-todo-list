@@ -118,6 +118,7 @@ export function completeTodo(todoId) {
 
 //Returns true if the login was successful, otherwise returns false
 export function loginUser(username, password) {
+    if (!username || !password || username === '' || password === '') return false;
     const users = getUsers();
     const userData = users.find(user => { return user.username === username; });
     if (!userData) return false;
@@ -129,6 +130,7 @@ export function loginUser(username, password) {
 
 //Returns true if the signup was successful, otherwise returns false
 export function signupUser(username, password) {
+    if (!username || !password || username === '' || password === '') return false;
     const users = getUsers();
     const userData = users.find(user => { return user.username === username; });
     if (userData) return false;
